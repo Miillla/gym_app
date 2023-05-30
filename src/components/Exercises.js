@@ -37,7 +37,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
           exerciseOptions
         );
       }
-      console.log(setExercises);
+
       setExercises(exercisesData);
     };
   }, [bodyPart]);

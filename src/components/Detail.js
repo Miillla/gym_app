@@ -1,24 +1,24 @@
 import React from "react";
 import { Typography, Stack, Button } from "@mui/material";
 
-import BodyPart from "../assets/icons/body-part.png";
-import Target from "../assets/icons/target.png";
-import Eguipmet from "../assets/icons/equipment.png";
+import BodyPartImage from "../assets/icons/body-part.png";
+import TargetImage from "../assets/icons/target.png";
+import EguipmetImage from "../assets/icons/equipment.png";
 
 const Detail = ({ exerciseDetail }) => {
-  const { bodyPart, girfUrl, name, equipment } = exerciseDetail;
+  const { bodyPart, gifUrl, name, equipment, target } = exerciseDetail;
 
   const extraDetail = [
     {
-      icon: BodyPart,
+      icon: BodyPartImage,
       title: "Body Part",
     },
     {
-      icon: Target,
+      icon: TargetImage,
       title: "Body Part",
     },
     {
-      icon: Eguipmet,
+      icon: EguipmetImage,
       title: "Body Part",
     },
   ];
@@ -28,16 +28,16 @@ const Detail = ({ exerciseDetail }) => {
       gap="60px"
       sx={{ flexDirection: { lg: "row" }, p: "20px", alignItems: "center" }}
     >
-      <img src={girfUrl} alt={name} loading="lazy" className="detail-image" />
+      <img src={gifUrl} alt={name} loading="lazy" className="detail-image" />
       <Stack sx={{ gap: { lg: "35px", xs: "20px" } }}>
         <Typography>{name}</Typography>
-        <Typogarfy>
+        <Typography>
           {" "}
           Exercises keep you strong.{" "}
           <span style={{ textTransform: "capitalize" }}>{name}</span> bup is one
           of the best <br /> exercises to target your {target}. It will help you
           improve your <br /> mood and gain energy.
-        </Typogarfy>
+        </Typography>
         {extraDetail.map((item, index) => (
           <Stack
             key={index}
